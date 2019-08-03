@@ -3,12 +3,11 @@
     <head>
     
     <!-- Load js files -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="stylesheet" href="{{mix('css/app.css')}}">
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/b125711156.js"></script>
-
-
-    <!-- Responsive design for mobile navigation -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    -->
 
     <style>
         body {
@@ -25,53 +24,98 @@
     </head>
     <body>
 
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" 
-        style="position: sticky; z-index: 1071; top: 0;">
-            <div class="d-flex justify-content-end">
-            <a class="navbar-brand" href="/"  style="color: #fff;">
-                Sistema PYP (eada)
-               </a>
-            <div class="nav navbar-nav navbar-right">
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/" style="margin-right: 1rem; color: #fff;">Inicio <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item" style="margin-right: 1rem;">
-                            <a class="nav-link" href="/admin/contacts" style="color: #fff;">Clientes</a>
-                        <li class="nav-item" style="margin-right: 1rem;">
-                            <a class="nav-link" href="/admin/stock" style="color: #fff;">Stock</a>
-                        </li>
-                    </ul>
-                    <span class="navbar-text">
-                    </span>
-                </div>
-            </div>
-        </nav>
-        <!-- End of Navbar -->
+        <div id="app">
+          <v-app id="inspire">
+            <v-navigation-drawer
+              v-model="drawer"
+              app
+            >
+              <v-list dense>
+                <v-list-item @click="">
+                  <v-list-item-action>
+                    <v-icon>home</v-icon>
+                  </v-list-item-action>
+                  <v-list-item-content>
+                    <v-list-item-title>Home</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+                <v-list-item @click="">
+                  <v-list-item-action>
+                    <v-icon>contact_mail</v-icon>
+                  </v-list-item-action>
+                  <v-list-item-content>
+                    <v-list-item-title>Contact</v-list-item-title>
+                  </v-list-item-content>
+                </v-list-item>
+              </v-list>
+            </v-navigation-drawer>
 
-        <!-- Content -->
+            <v-app-bar
+              app
+              color="indigo"
+              dark
+            >
+              <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+              <v-toolbar-title>Application</v-toolbar-title>
+            </v-app-bar>
 
-        <div class="container-fluid" style="margin-top: 3rem;">
-            <div class="row flex-xl-nowrap">
+    
+            <v-content>
+              <v-container
+                fluid
+                fill-height
+              >
+                <v-layout
+                  align-center
+                  justify-center
+                >
+                  <v-flex text-xs-center>
+                    <v-tooltip left>
+                      <template v-slot:activator="{ on }">
+                        <v-btn
+                          icon
+                          href="/admin/contacts"
+                          large
+                          target="_blank"
+                          v-on="on"
+                        >
+                          <v-icon large>mdi-code-tags</v-icon>
+                        </v-btn>
+                      </template>
+                      <span>Source</span>
+                    </v-tooltip>
 
-                <!-- Left Sidebar -->
-
-                <div class="col-12 col-md-3 col-xl-2 bd-sidebar"> 
-                </div>
-
-                <!-- Main body -->
-
-                <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
-                    <div class="container-fluid">
-                        @yield('main')
-                    </div>
-                </main>
-
-            </div>
+                    <v-tooltip right>
+                      <template v-slot:activator="{ on }">
+                        <v-btn
+                          icon
+                          large
+                          href="https://codepen.io/johnjleider/pen/rJdVMq"
+                          target="_blank"
+                          v-on="on"
+                        >
+                          <v-icon large>mdi-codepen</v-icon>
+                        </v-btn>
+                      </template>
+                      <span>Codepen</span>
+                    </v-tooltip>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-content>
+            
+            <v-footer
+              color="indigo"
+              app
+            >
+              <span class="white--text">&copy; 2019</span>
+            </v-footer>
+          </v-app>
         </div>
 
     </body>
+
+    <script type="text/javascript" src="{{mix('js/app.js')}}"></script>
+
 </html>
 

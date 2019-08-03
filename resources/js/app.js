@@ -3,6 +3,14 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import Vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+import Vue from 'vue'
+
+Vue.use(Vuetify);
+
+import '@mdi/font/css/materialdesignicons.css'
+import 'material-design-icons-iconfont/dist/material-design-icons.css'
 
 require('./bootstrap');
 
@@ -28,5 +36,9 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 
 const app = new Vue({
-    el: '#app',
+  el: '#app',
+  vuetify: new Vuetify(),
+  data: () => ({
+    drawer: null
+  })
 });
