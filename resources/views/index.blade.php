@@ -1,7 +1,13 @@
 @extends ('welcome')
     
-    @section ('main')
+    @section ('content')
 
-    aa
+    <div class="card">
+        <example-component></example-component>
+    </div>
+
+    <div class="card">
+        <formulario></formulario>
+    </div>
 
     @endsection

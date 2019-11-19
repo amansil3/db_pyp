@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/admin/contacts', ['uses' => 'Contacts_Controller@Index']);
+Route::post('/admin/ruta', 'PostForm@Index');

@@ -8,7 +8,7 @@
     <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/b125711156.js"></script>
     -->
-
+    
     <style>
         body {
             font-family: Arial;
@@ -31,7 +31,7 @@
               app
             >
               <v-list dense>
-                <v-list-item @click="">
+                <v-list-item @click="" href="/">
                   <v-list-item-action>
                     <v-icon>home</v-icon>
                   </v-list-item-action>
@@ -39,7 +39,7 @@
                     <v-list-item-title>Home</v-list-item-title>
                   </v-list-item-content>
                 </v-list-item>
-                <v-list-item @click="">
+                <v-list-item @click="" href="/admin/contacts">
                   <v-list-item-action>
                     <v-icon>contact_mail</v-icon>
                   </v-list-item-action>
@@ -69,6 +69,8 @@
                   align-center
                   justify-center
                 >
+                  @yield('content')
+                  <!--
                   <v-flex text-xs-center>
                     <v-tooltip left>
                       <template v-slot:activator="{ on }">
@@ -100,6 +102,7 @@
                       <span>Codepen</span>
                     </v-tooltip>
                   </v-flex>
+                -->
                 </v-layout>
               </v-container>
             </v-content>
@@ -112,7 +115,6 @@
             </v-footer>
           </v-app>
         </div>
-
     </body>
 
     <script type="text/javascript" src="{{mix('js/app.js')}}"></script>

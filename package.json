@@ -26,6 +26,8 @@
     },
     "dependencies": {
         "material-design-icons-iconfont": "^5.0.1",
+        "vue-material": "^1.0.0-beta-11",
+        "vue-simple-alert": "^1.1.1",
         "vuetify": "^2.0.4"
     }
 }
