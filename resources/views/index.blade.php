@@ -6,8 +6,10 @@
         <example-component></example-component>
     </div>
 
+    <!--
     <div class="card">
         <formulario></formulario>
     </div>
+    -->
 
     @endsection

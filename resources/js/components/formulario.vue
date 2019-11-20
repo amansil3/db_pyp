@@ -35,13 +35,6 @@
       required
     ></v-select>
 
-    <v-checkbox
-      v-model="checkbox"
-      :rules="[v => !!v || 'Debes estar de acuerdo para continuar!']"
-      label="Esta de acuerdo?"
-      required
-    ></v-checkbox>
-
     <v-btn
       :disabled="!valid"
       color="success"
@@ -50,7 +43,7 @@
     >
       Enviar
     </v-btn>
-
+    
     <v-btn
       color="error"
       class="mr-4"
@@ -75,7 +68,7 @@
       name: '',
       nameRules: [
         v => !!v || 'El nombre es requerido',
-        v => (v && v.length <= 20) || 'El nombre debe ser menor a 20 caraceters',
+        v => (v && v.length <= 20) || 'El nombre debe ser menor a 20 caracteres',
       ],
       surname: '',
       surnameRules:[
@@ -94,7 +87,6 @@
         'Item 3',
         'Item 4',
       ],
-      checkbox: false,
     }),
 
     methods: {
