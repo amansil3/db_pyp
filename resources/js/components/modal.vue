@@ -7,14 +7,12 @@
           <v-icon> mdi mdi-plus </v-icon>
         </v-btn>
       </template>
-
       <v-card>
         <template>
           <v-form 
             ref="form"
             v-model="valid"
             lazy-validation
-            method="put"
           >
 
             <v-card-title>
@@ -131,10 +129,10 @@
           nombreVulgar: this.nombreVulgar,
           nombreCientifico: this.nombreCientifico,
           cantidad: this.cantidad,
-          csrf:this.csrf,
         })
         .then(response => 
         {
+          this.dialog = false;
           console.log(response)
         })
         .catch(error => 

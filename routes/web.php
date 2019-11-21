@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('subindex');
 });
 
-Route::put('contacts', ['uses' => 'Contacts_Controller@Index']);
-Route::put('ruta', 'PostForm@Index');
+Route::get('inventario', ['uses' => 'Plants_Controller@Index']);
+Route::post('ruta', ['uses' => 'Plants_Controller@ReceptForm']);

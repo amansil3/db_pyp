@@ -33,7 +33,7 @@ Vue.use(VueSimpleAlert); **/
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('abrirmodal', require('./components/abrirmodal.vue').default);
 Vue.component('formulario', require('./components/formulario.vue').default);
 
 /**
@@ -46,7 +46,6 @@ const app = new Vue({
   el: '#app',
   vuetify: new Vuetify(),
   data: () => ({
-    drawer: null,
-    csrfToken: "{{ csrf_token() }}",
+    drawer: false,
   })
 });

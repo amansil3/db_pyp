@@ -15,9 +15,9 @@ class PlantasTable extends Migration
 
     public function index()
     {
-        $plants = DB::table('plants')->post();
+        $query = "select * from plants";
 
-        return view('ruta',['plants' => $plants])->with('Consulta');
+        return view('ruta')->with('$query');
     }
 
     public function up()
@@ -28,7 +28,8 @@ class PlantasTable extends Migration
             $table->string('cientifico');
             $table->string('tipo');
             $table->integer('cantidad');
-            $table->boolean('estado');
+            $table->boolean('estado')->default(true);
+            $table->timestamps();
         });
     }
 

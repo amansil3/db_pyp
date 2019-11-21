@@ -1,6 +1,6 @@
-@extends ('welcome')
+@extends ('index')
     
-    @section ('main')
+    @section ('content')
 
     <template>
       <v-app id="inspire">
@@ -9,7 +9,7 @@
           app
         >
           <v-list dense>
-            <v-list-item @click="">
+            <v-list-item @click="" href="/">
               <v-list-item-action>
                 <v-icon>home</v-icon>
               </v-list-item-action>
@@ -17,7 +17,7 @@
                 <v-list-item-title>Home</v-list-item-title>
               </v-list-item-content>
             </v-list-item>
-            <v-list-item @click="">
+            <v-list-item @click="" href="inventario">
               <v-list-item-action>
                 <v-icon>contact_mail</v-icon>
               </v-list-item-action>
