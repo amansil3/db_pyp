@@ -11,6 +11,15 @@ class PlantasTable extends Migration
      *
      * @return void
      */
+
+
+    public function index()
+    {
+        $plants = DB::table('plants')->post();
+
+        return view('ruta',['plants' => $plants])->with('Consulta');
+    }
+
     public function up()
     {
         Schema::create('plants', function (Blueprint $table) {

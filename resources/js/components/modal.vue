@@ -3,7 +3,9 @@
     <v-dialog v-model="dialog" persistent max-width="600px">
 
       <template v-slot:activator="{ on }">
-        <v-btn color="primary" dark v-on="on">Open Dialog</v-btn>
+        <v-btn color="primary" dark v-on="on">
+          <v-icon> mdi mdi-plus </v-icon>
+        </v-btn>
       </template>
 
       <v-card>
@@ -12,6 +14,7 @@
             ref="form"
             v-model="valid"
             lazy-validation
+            method="put"
           >
 
             <v-card-title>
@@ -66,7 +69,7 @@
                 color="warning" 
                 v-on:click="vaciar"
                 >
-                  Vaciar Formulario
+                  Vaciar Datos
               </v-btn>
               <v-btn 
                 color="success" 
@@ -123,11 +126,12 @@
       },
       save()
       {
-        axios.post("/admin/ruta", 
+        axios.post("ruta", 
         {
           nombreVulgar: this.nombreVulgar,
           nombreCientifico: this.nombreCientifico,
           cantidad: this.cantidad,
+          csrf:this.csrf,
         })
         .then(response => 
         {

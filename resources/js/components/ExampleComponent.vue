@@ -52,46 +52,9 @@
                     this.modal = true;
                 }
             },
-            /*
-            suma()
-            {
-                this.counter = this.counter + 1
-            },
-            resta()
-            {
-                if (this.counter != 0)
-                {
-                    this.counter = this.counter - 1
-                }
-                else{
-                    alert('');
-                }
-            },
-            restart()
-            {
-                this.counter = 0
-            },
-            save()
-            {
-                axios.post("/admin/ruta", 
-                {
-                  name: this.name,
-                  surname: this.surname,
-                  email: this.email,
-                  item: this.select
-                })
-                .then(response => 
-                {
-                  console.log(response)
-                })
-                .catch(error => 
-                {
-                  console.log(error.response)
-                })
-            },*/
         },
         mounted() {
             console.log('Component mounted.')
-        }
+        },
     }
 </script>

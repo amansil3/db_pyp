@@ -46,6 +46,7 @@ const app = new Vue({
   el: '#app',
   vuetify: new Vuetify(),
   data: () => ({
-    drawer: null
+    drawer: null,
+    csrfToken: "{{ csrf_token() }}",
   })
 });

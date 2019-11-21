@@ -25,6 +25,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "cookie": "^0.4.0",
         "material-design-icons-iconfont": "^5.0.1",
         "vue-material": "^1.0.0-beta-11",
         "vue-simple-alert": "^1.1.1",

@@ -70,39 +70,7 @@
                   justify-center
                 >
                   @yield('content')
-                  <!--
-                  <v-flex text-xs-center>
-                    <v-tooltip left>
-                      <template v-slot:activator="{ on }">
-                        <v-btn
-                          icon
-                          href="/admin/contacts"
-                          large
-                          target="_blank"
-                          v-on="on"
-                        >
-                          <v-icon large>mdi-code-tags</v-icon>
-                        </v-btn>
-                      </template>
-                      <span>Source</span>
-                    </v-tooltip>
-
-                    <v-tooltip right>
-                      <template v-slot:activator="{ on }">
-                        <v-btn
-                          icon
-                          large
-                          href="https://codepen.io/johnjleider/pen/rJdVMq"
-                          target="_blank"
-                          v-on="on"
-                        >
-                          <v-icon large>mdi-codepen</v-icon>
-                        </v-btn>
-                      </template>
-                      <span>Codepen</span>
-                    </v-tooltip>
-                  </v-flex>
-                -->
+                  
                 </v-layout>
               </v-container>
             </v-content>
