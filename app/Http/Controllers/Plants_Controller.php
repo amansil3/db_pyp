@@ -8,10 +8,26 @@ use App\Plantas;
 class Plants_Controller extends Controller
 {
     public function Index(){
-        return view ('plants.plants'); 
+    	
+    	$query = \DB::table('plants')->get();
+
+        return view('plants.plants', ['plants' => $query]);
     }
     public function ReceptForm(Request $request){
-        $receptor = $request->all();
-        return $receptor;
+
+        \DB::table('plants')->insert([
+	        'nombre' => $request['nombreVulgar'],
+	        'cientifico' => $request['nombreCientifico'],
+	        'tipo' => $request['tipo'],
+	        'cantidad' => $request['cantidad'],
+	    ]);
+
+        return view('subindex');
+    }
+
+    public function Delete(Request $request){
+    	\DB::table('plants')
+			->where('id', $request['$id'])
+			->update(['estado' => false]);
     }
 }

@@ -56,7 +56,7 @@
               dark
             >
               <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-              <v-toolbar-title>Laraveliada</v-toolbar-title>
+              <v-toolbar-title>Laravel</v-toolbar-title>
             </v-app-bar>
 
     

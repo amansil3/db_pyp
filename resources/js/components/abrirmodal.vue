@@ -1,6 +1,9 @@
 <template>
     <div class="container">
         <div class="row justify-content-center">
+            Ejemplares
+        </div>
+        <div class="row justify-content-center">
             <modal :abrir="modalvar"></modal>
         </div>
     </div>

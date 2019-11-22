@@ -43,6 +43,16 @@
                 
                 <v-row>
                   <v-col cols="12" sm="6" md="4">
+                    <v-select
+                    v-model="tipo"
+                    label="Tipo"
+                    :items="items"
+                    :rules="[v => !!v || 'El tipo es requerido']"
+                    >
+                    </v-select>
+                  </v-col>
+
+                  <v-col cols="12" sm="6" md="4">
                     <v-text-field
                       v-model="cantidad"
                       label="Cantidad"
@@ -107,6 +117,12 @@
         cantidadRules:[
           v => !!v || 'La cantidad es requerida',
         ],
+        tipo: null,
+        items:[
+          'Árbol',
+          'Arbusto',
+          'Plantín'
+        ]
       }
     },
     methods:{
@@ -129,6 +145,7 @@
           nombreVulgar: this.nombreVulgar,
           nombreCientifico: this.nombreCientifico,
           cantidad: this.cantidad,
+          tipo: this.tipo
         })
         .then(response => 
         {
@@ -143,8 +160,3 @@
     },
   }
 </script>
-
-<!--
-  
-
--->

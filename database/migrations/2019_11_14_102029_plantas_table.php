@@ -12,14 +12,6 @@ class PlantasTable extends Migration
      * @return void
      */
 
-
-    public function index()
-    {
-        $query = "select * from plants";
-
-        return view('ruta')->with('$query');
-    }
-
     public function up()
     {
         Schema::create('plants', function (Blueprint $table) {
