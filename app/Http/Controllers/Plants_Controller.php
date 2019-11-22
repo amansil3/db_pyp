@@ -40,7 +40,7 @@ class Plants_Controller extends Controller
             ->where('id', $request['$id'])
             ->update(['estado' => false]);*/
 
-        $plantaDelete = Plantas::find($request['id'])
+        $plantaDelete = Plantas::find($request['id']);
             $plantaDelete->nombre = $request->nombreVulgar;
             $plantaDelete->cientifico = $request->nombreCientifico;
             $plantaDelete->tipo = $request->tipo;
@@ -54,7 +54,7 @@ class Plants_Controller extends Controller
 			->where('id', $request['$id'])
 			->update(['estado' => false]);*/
 
-        $plantaDelete = Plantas::find($request['id'])
+        $plantaDelete = Plantas::find($request['id']);
             $plantaDelete->estado = false;
         $plantaDelete->save();
 
