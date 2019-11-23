@@ -35,6 +35,7 @@ Vue.use(VueSimpleAlert); **/
 
 Vue.component('abrirmodal', require('./components/abrirmodal.vue').default);
 Vue.component('formulario', require('./components/formulario.vue').default);
+Vue.component('tablecomponent', require('./components/tablecomponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
