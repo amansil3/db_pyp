@@ -2141,96 +2141,70 @@ __webpack_require__.r(__webpack_exports__);
       singleSelect: false,
       selected: [],
       headers: [{
-        text: 'Dessert (100g serving)',
-        align: 'left',
-        sortable: false,
-        value: 'name'
+        text: 'Nombre vulgar',
+        value: 'nombre'
       }, {
-        text: 'Calories',
-        value: 'calories'
+        text: 'Nombre científico',
+        value: 'cientifico'
       }, {
-        text: 'Fat (g)',
-        value: 'fat'
+        text: 'Cantidad',
+        value: 'cantidad'
       }, {
-        text: 'Carbs (g)',
-        value: 'carbs'
-      }, {
-        text: 'Protein (g)',
-        value: 'protein'
-      }, {
-        text: 'Iron (%)',
-        value: 'iron'
+        text: 'Tipo',
+        value: 'tipo'
       }],
-      desserts: [{
-        name: 'Frozen Yogurt',
-        calories: 159,
-        fat: 6.0,
-        carbs: 24,
-        protein: 4.0,
-        iron: '1%'
+      items: [{
+        nombre: 'Frozen Yogurt',
+        cientifico: 159,
+        cantidad: 6.0,
+        tipo: '1%'
       }, {
-        name: 'Ice cream sandwich',
-        calories: 237,
-        fat: 9.0,
-        carbs: 37,
-        protein: 4.3,
-        iron: '1%'
+        nombre: 'Ice cream sandwich',
+        cientifico: 237,
+        cantidad: 9.0,
+        tipo: '1%'
       }, {
-        name: 'Eclair',
-        calories: 262,
-        fat: 16.0,
-        carbs: 23,
-        protein: 6.0,
-        iron: '7%'
+        nombre: 'Eclair',
+        cientifico: 262,
+        cantidad: 16.0,
+        tipo: '7%'
       }, {
-        name: 'Cupcake',
-        calories: 305,
-        fat: 3.7,
-        carbs: 67,
-        protein: 4.3,
-        iron: '8%'
+        nombre: 'Cupcake',
+        cientifico: 305,
+        cantidad: 3.7,
+        tipo: '8%'
       }, {
-        name: 'Gingerbread',
-        calories: 356,
-        fat: 16.0,
-        carbs: 49,
-        protein: 3.9,
-        iron: '16%'
+        nombre: 'Gingerbread',
+        cientifico: 356,
+        cantidad: 16.0,
+        tipo: '16%'
       }, {
-        name: 'Jelly bean',
-        calories: 375,
-        fat: 0.0,
+        nombre: 'Jelly bean',
+        cientifico: 375,
+        cantidad: 0.0,
         carbs: 94,
         protein: 0.0,
-        iron: '0%'
+        tipo: '0%'
       }, {
-        name: 'Lollipop',
-        calories: 392,
-        fat: 0.2,
-        carbs: 98,
-        protein: 0,
-        iron: '2%'
+        nombre: 'Lollipop',
+        cientifico: 392,
+        cantidad: 0.2,
+        tipo: '2%'
       }, {
-        name: 'Honeycomb',
-        calories: 408,
-        fat: 3.2,
-        carbs: 87,
-        protein: 6.5,
-        iron: '45%'
+        nombre: 'Honeycomb',
+        cientifico: 408,
+        cantidad: 3.2,
+        tipo: '45%'
       }, {
-        name: 'Donut',
-        calories: 452,
-        fat: 25.0,
-        carbs: 51,
-        protein: 4.9,
-        iron: '22%'
+        nombre: 'Donut',
+        cientifico: 452,
+        cantidad: 25.0,
+        tipo: '22%'
       }, {
-        name: 'KitKat',
-        calories: 518,
-        fat: 26.0,
-        carbs: 65,
-        protein: 7,
-        iron: '6%'
+        nombre: 'KitKat',
+        cientifico: 518,
+        cantidad: 26.0,
+        tipo: '6%'
       }]
     };
   }
@@ -38712,7 +38686,7 @@ var render = function() {
     staticClass: "elevation-1",
     attrs: {
       headers: _vm.headers,
-      items: _vm.desserts,
+      items: _vm.items,
       "single-select": _vm.singleSelect,
       "item-key": "name",
       "show-select": ""
@@ -38723,7 +38697,7 @@ var render = function() {
         fn: function() {
           return [
             _c("v-switch", {
-              staticClass: "pa-3",
+              staticClass: "0pa-3",
               attrs: { label: "Single select" },
               model: {
                 value: _vm.singleSelect,

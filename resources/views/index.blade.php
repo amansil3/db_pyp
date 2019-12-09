@@ -69,7 +69,7 @@
                   align-center
                   justify-center
                 >
-
+                
                   @yield('content')
 
                 </v-layout>

@@ -36,9 +36,6 @@ class Plants_Controller extends Controller
     }
 
     public function Update(Request $request){
-        /*\DB::table('plants')
-            ->where('id', $request['$id'])
-            ->update(['estado' => false]);*/
 
         $plantaDelete = Plantas::find($request['id']);
             $plantaDelete->nombre = $request->nombreVulgar;
