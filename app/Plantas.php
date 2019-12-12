@@ -13,8 +13,16 @@ class Plantas extends Model
     protected $fillable = [
         'nombre',
         'cientifico',
-        'tipo',
-        'cantidad',
-        'estado'
+        'tipo_id',
+        'cantidad'
     ];
+
+    protected $casts = [
+    	'estado' => 'boolean'
+    ];
+
+    public function tipo()
+    {
+    	return $this->belongsTo(PlantType::class);
+    }
 }

@@ -18,7 +18,10 @@ class PlantasTable extends Migration
             $table->bigIncrements('id');
             $table->string('nombre');
             $table->string('cientifico');
-            $table->string('tipo');
+
+            $table->unsignedBigInteger('tipo_id');
+            $table->foreign('tipo_id')->references('id')->on('plant_type');
+
             $table->integer('cantidad');
             $table->boolean('estado')->default(true);
             $table->timestamps();
