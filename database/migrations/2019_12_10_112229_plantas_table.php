@@ -19,8 +19,8 @@ class PlantasTable extends Migration
             $table->string('nombre');
             $table->string('cientifico');
 
-            $table->unsignedBigInteger('tipo_id');
-            $table->foreign('tipo_id')->references('id')->on('plant_type');
+            $table->unsignedBigInteger('plant_type_id');
+            $table->foreign('plant_type_id')->references('id')->on('plant_type');
 
             $table->integer('cantidad');
             $table->boolean('estado')->default(true);

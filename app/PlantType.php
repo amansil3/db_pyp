@@ -11,4 +11,11 @@ class PlantType extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = ['tipo'];
+
+
+    public function plantas()
+    {
+        return $this->hasMany(Planta::class);
+    }
+
 }

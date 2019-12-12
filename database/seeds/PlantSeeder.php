@@ -1,6 +1,6 @@
 <?php
 
-use App\Plantas as Plants;
+use App\Planta as Plants;
 use Illuminate\Database\Seeder;
 
 class PlantSeeder extends Seeder
@@ -15,19 +15,19 @@ class PlantSeeder extends Seeder
         Plants::create([
             'nombre' => 'Tipa',
             'cientifico' => 'Tipuana',
-            'tipo_id' => '1',
+            'plant_type_id' => '1',
             'cantidad' => '10'
         ]);
         Plants::create([
             'nombre' => 'Fresno',
             'cientifico' => 'Fraxinus',
-            'tipo_id' => '1',
+            'plant_type_id' => '1',
             'cantidad' => '10'
         ]);
         Plants::create([
             'nombre' => 'Boj',
             'cientifico' => 'Buxus',
-            'tipo_id' => '2',
+            'plant_type_id' => '2',
             'cantidad' => '10'
         ]);
     }

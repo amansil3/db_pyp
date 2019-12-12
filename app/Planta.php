@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Plantas extends Model
+class Planta extends Model
 {
     protected $table = 'plants';
 
@@ -13,7 +13,7 @@ class Plantas extends Model
     protected $fillable = [
         'nombre',
         'cientifico',
-        'tipo_id',
+        'plant_type_id',
         'cantidad'
     ];
 
@@ -25,4 +25,8 @@ class Plantas extends Model
     {
     	return $this->belongsTo(PlantType::class);
     }
+   
+    factory(Plant::class)->create([
+        'profession_id' => $professionId
+    ]);
 }
