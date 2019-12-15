@@ -11,8 +11,8 @@ class Planta extends Model
     protected $primaryKey = 'id';
 
     protected $fillable = [
-        'nombre',
-        'cientifico',
+        'nombre_vulgar',
+        'nombre_cientifico',
         'plant_type_id',
         'cantidad'
     ];
@@ -26,7 +26,9 @@ class Planta extends Model
     	return $this->belongsTo(PlantType::class);
     }
    
+   /*
     factory(Plant::class)->create([
         'profession_id' => $professionId
     ]);
+    */
 }

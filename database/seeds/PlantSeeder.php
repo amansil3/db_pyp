@@ -13,22 +13,26 @@ class PlantSeeder extends Seeder
     public function run()
     {
         Plants::create([
-            'nombre' => 'Tipa',
-            'cientifico' => 'Tipuana',
+            'nombre_vulgar' => 'Tipa',
+            'nombre_cientifico' => 'Tipuana',
             'plant_type_id' => '1',
             'cantidad' => '10'
         ]);
+
         Plants::create([
-            'nombre' => 'Fresno',
-            'cientifico' => 'Fraxinus',
+            'nombre_vulgar' => 'Fresno',
+            'nombre_cientifico' => 'Fraxinus',
             'plant_type_id' => '1',
             'cantidad' => '10'
         ]);
+
         Plants::create([
-            'nombre' => 'Boj',
-            'cientifico' => 'Buxus',
+            'nombre_vulgar' => 'Boj',
+            'nombre_cientifico' => 'Buxus',
             'plant_type_id' => '2',
             'cantidad' => '10'
         ]);
+
+        factory(Plants::class)->times(17)->create();
     }
 }

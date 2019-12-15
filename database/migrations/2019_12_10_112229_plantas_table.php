@@ -16,8 +16,8 @@ class PlantasTable extends Migration
     {
         Schema::create('plants', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nombre');
-            $table->string('cientifico');
+            $table->string('nombre_vulgar');
+            $table->string('nombre_cientifico');
 
             $table->unsignedBigInteger('plant_type_id');
             $table->foreign('plant_type_id')->references('id')->on('plant_type');
