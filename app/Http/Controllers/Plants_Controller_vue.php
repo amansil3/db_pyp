@@ -8,26 +8,20 @@ use Illuminate\Support\Facades\DB;
 
 class Plants_Controller extends Controller
 {
-    public function Index(){
+    public function Index()
+    {
     	
-    	$plants = DB::table('plants')->get();
+        $plants = DB::table('plants')->get;
 
-        $title = dd($plants);
+        dd($plants);
 
-        return view('plants.plants')->with($title);
+        return view('subindex');
+
+    	//$query = \DB::table('plants')->get();
+
+        //return view('plants.plants', ['plants' => $query]);
     }
-}
-
     /*
-    public function ReceptForm(Request $request){
-        
-        \DB::table('plants')->insert([
-	        'nombre' => $request['nombreVulgar'],
-	        'cientifico' => $request['nombreCientifico'],
-	        'tipo' => $request['tipo'],
-	        'cantidad' => $request['cantidad'],
-	    ]);
-        
         $planta = new Plantas;
 
             $planta->nombre = $request->nombreVulgar;
@@ -40,6 +34,7 @@ class Plants_Controller extends Controller
         return view('subindex');
     }
 
+    /*
     public function Update(Request $request){
 
         $plantaDelete = Plantas::find($request['id']);
@@ -52,12 +47,13 @@ class Plants_Controller extends Controller
     }
 
     public function Delete(Request $request){
-    	DB::table('plants')
+    	/*\DB::table('plants')
 			->where('id', $request['$id'])
-			->update(['estado' => false]);
+			->update(['estado' => false]);*/
+    /*
         $plantaDelete = Plantas::find($request['id']);
             $plantaDelete->estado = false;
         $plantaDelete->save();
 
-    }
-}/*
+    }*/
+}
