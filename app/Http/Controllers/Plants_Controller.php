@@ -3,18 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Plantas;
+use App\Planta;
 use Illuminate\Support\Facades\DB;
 
 class Plants_Controller extends Controller
 {
     public function Index(){
     	
-    	$plants = DB::table('plants')->get();
+        $eloquent = Planta::all();
 
-        $title = dd($plants);
-
-        return view('plants.plants')->with($title);
+        return view('plants.plants')->with('plants', $eloquent);
     }
 }
 
