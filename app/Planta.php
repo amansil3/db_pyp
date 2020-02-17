@@ -26,9 +26,4 @@ class Planta extends Model
     	return $this->belongsTo(PlantType::class);
     }
    
-   /*
-    factory(Plant::class)->create([
-        'profession_id' => $professionId
-    ]);
-    */
 }
